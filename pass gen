@@ -1,20 +1,19 @@
 import random
 
 def generate_password(length):
-  letters = "abcdefghijklmnopqrstuvwxyz"
-  numbers = "0123456789"
+  characters = "abcdefghijklmnopqrstuvwxyz0123456789"
 
   password = ""
   for i in range(length):
-    password += random.choice(letters + numbers)
-
-  password = "".join(set(password))
+    char = random.choice(characters)
+    password += char
 
   return password
 
 if __name__ == "__main__":
   number_of_passwords = int(input("How many passwords do you want? "))
-#the max number is 282,110,990,745,6
 
   for i in range(number_of_passwords):
-    print(generate_password(8))
+    password = generate_password(8)
+    print(password)
+
