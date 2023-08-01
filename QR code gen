@@ -1,0 +1,6 @@
+
+import qrcode # "pip install qrcode" from the terminal
+# from library
+qr_img = qrcode.make(input("Give me your link "))
+
+qr_img.save("QR.jpg") # The QR Code will be in the same file
